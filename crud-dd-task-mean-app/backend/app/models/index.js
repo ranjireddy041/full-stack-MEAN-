@@ -9,5 +9,5 @@ db.url = dbConfig.url;
 db.tutorials = require("./tutorial.model.js")(mongoose);
 
 module.exports = {
-  url: process.env.MONGO_URI || "mongodb://mongo:27017/dd-db"
+  url: process.env.MONGO_URI || "mongodb://mongo:27017/dd_db"
 };
