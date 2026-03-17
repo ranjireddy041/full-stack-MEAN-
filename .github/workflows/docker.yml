@@ -19,7 +19,7 @@ jobs:
         password: ${{secrets.DOCKER_PASSWORD}}
     - name: build backend and push to DH
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/fullstack-backend ./backend
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/fullstack-backend ./crud-dd-task-mean-app/backend
         docker push ${{ secrets.DOCKER_USERNAME }}/fullstack-backend
     - name: build frontend and push to dhub
       run: |
