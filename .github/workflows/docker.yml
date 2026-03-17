@@ -20,9 +20,9 @@ jobs:
     - name: build backend and push to DH
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/fullstack-backend ./crud-dd-task-mean-app/backend
-        docker push ${{ secrets.DOCKER_USERNAME }}/fullstack-backend
+        docker push ${{ secrets.DOCKER_USERNAME }}/fullstack-backend:latest
     - name: build frontend and push to dhub
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/fullstack-frontend ./frontend
-        docker push ${{ secrets.DOCKER_USERNAME }}/fullstack-frontend ./frontend
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/fullstack-frontend ./crud-dd-task-mean-app/frontend
+        docker push ${{ secrets.DOCKER_USERNAME }}/fullstack-frontend:latest
       
