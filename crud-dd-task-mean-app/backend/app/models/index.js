@@ -8,4 +8,6 @@ db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.tutorials = require("./tutorial.model.js")(mongoose);
 
-module.exports = db;
+module.exports = {
+  url: process.env.MONGO_URI || "mongodb://mongo:27017/mongo-db"
+};
